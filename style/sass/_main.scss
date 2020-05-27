@@ -174,8 +174,6 @@
         
         .about-us {
             padding: 4rem 0;
-            display: flex;
-            flex-direction: column;
         }
         
         .about-us__item {
@@ -202,4 +200,36 @@
         
         .about-us__subtilte {
             font-size: 18px;
+        }
+        /* OUR SERVICE */
+        
+        .our-service__item {
+            // background-color: #eaeafe;
+            margin: 10px 0px;
+            list-style: none;
+            display: inline-block;
+        }
+        
+        .our-service__card {
+            background-color: #eaeafe;
+            margin: 10px 0px;
+            padding: 15px;
+        }
+        
+        .our-service__image {
+            height: 120px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .our-service__title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .our-service__desc {
+            font-size: 14px;
+            line-height: 1.2rem;
+            color: $desc-font;
         }
