@@ -1,3 +1,172 @@
-body {
-    background-color: blue;
-}
+        @import 'base';
+        .header-wrapper {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('/images/beekeepers.jpg');
+            background-size: cover;
+            height: 92vh;
+            overflow: hidden;
+            padding: 1.5em 4em 0 0;
+            color: #fff;
+            /* MENU STYLE */
+            nav {
+                display: flex;
+                .menu {
+                    flex: 1;
+                    display: inline;
+                    .menu__item {
+                        list-style: none;
+                        display: inline-block;
+                        padding: 6px 20px;
+                        &:first-child {
+                            padding-right: 0;
+                        }
+                        &::after {
+                            content: '';
+                            width: 0;
+                            height: 2px;
+                            background: $yellow-light;
+                            display: block;
+                            margin: auto;
+                            transition: .5s;
+                        }
+                        &:hover::after {
+                            width: 100%;
+                        }
+                    }
+                    .menu__link {
+                        color: #fff;
+                        text-decoration: none;
+                        font-size: 16px;
+                    }
+                }
+            }
+            /*  HEADER CONTENT STYLE */
+            .header-text {
+                .header-text__title {
+                    font-size: 45px;
+                    margin: 2em 0 .5em 0;
+                }
+                .header-text__subtitle {
+                    font-size: 24px;
+                    font-weight: 300;
+                    margin-bottom: .5em;
+                }
+                .header-text__desc {
+                    font-size: 16px;
+                    line-height: 1.5rem;
+                    margin-bottom: 55px;
+                    max-width: 500px;
+                    &::before {
+                        content: '';
+                        height: 70px;
+                        width: 5px;
+                        background: yellow;
+                        float: right;
+                        margin-left: 15px;
+                        border-radius: 2px;
+                    }
+                }
+            }
+            /* SEARCH FORM STYLE */
+            .search-form {
+                .search-form__input {
+                    width: 350px;
+                    background: #fff;
+                    color: #a3a3a3;
+                    font: inherit;
+                    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+                    border: 0;
+                    outline: 0;
+                    padding: 15px 18px;
+                    border-radius: 5px;
+                }
+                .search-form__button {
+                    width: 110px;
+                    background: $yellow-light;
+                    color: #414141;
+                    font: inherit;
+                    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+                    border: 0;
+                    outline: 0;
+                    padding: 15px 18px;
+                    border-radius: 5px;
+                    margin-right: 5px;
+                }
+            }
+        }
+        /* WORK SECTION */
+        
+        .work-card {
+            display: flex;
+            flex-direction: column;
+            padding: 15px 0;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        
+        .work-card__title {
+            margin-bottom: 10px;
+        }
+        
+        .work-card__desc {
+            font-size: $desc-font;
+        }
+        
+        .work-card__number {
+            background: $yellow-dark;
+            border-radius: 100%;
+            color: #ffffff;
+            display: inline-block;
+            line-height: 1.6em;
+            margin-left: 10px;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+        }
+        /* COSTUMER SERVICE */
+        
+        .costumer-service {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            box-shadow: -1px -1px 5px 0px rgba(153, 153, 153, 1);
+            border-radius: 10px;
+            padding: 20px 0;
+        }
+        
+        .costumer-service__item {
+            list-style: none;
+            display: inline-block;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        .costumer-service__image {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .costumer-service__title {
+            color: $primery-dark;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .costumer-service__desc {
+            color: $desc-font;
+            font-size: 14px;
+            font-weight: 200;
+            margin-top: 5px;
+            display: inline-block;
+            max-width: 200px;
+        }
+        /* ABOUT US */
+        
+        .about-wrapper {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('/images/beekeepers.jpg');
+            background-size: cover;
+            overflow: hidden;
+            margin-top: 2rem;
+            padding: 2em 0;
+            color: #fff;
+        }

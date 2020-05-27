@@ -1,0 +1,48 @@
+@import url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css");
+// COLOR 
+$yellow-dark: #FECF14;
+$yellow-light:#FFF106;
+$white:#f5f5f5;
+$primery-light:#7d7e7f;
+$primery-dark:#464749;
+// FONT SIZE 
+$desc-font: 16px;
+//RESET
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+//MAIN
+body {
+    background: $white;
+    direction: rtl;
+    font-family: 'Vazir';
+}
+
+.wrapper {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    &__title {
+        font-size: 26px;
+        text-align: center;
+        margin: 10px 0 0 0;
+        color: $primery-dark;
+    }
+    &__subtitle {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: $primery-dark;
+    }
+}
+
+.cont {
+    max-width: 1200px;
+    padding: 1.5em;
+    margin: 0 auto;
+    overflow: hidden;
+}
