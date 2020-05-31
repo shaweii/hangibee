@@ -1,235 +1,474 @@
-        @import 'base';
-        .header-wrapper {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('/images/beekeepers.jpg');
-            background-size: cover;
-            height: 92vh;
-            overflow: hidden;
-            padding: 1.5em 4em 0 0;
-            color: #fff;
-            /* MENU STYLE */
-            nav {
-                display: flex;
-                .menu {
-                    flex: 1;
-                    display: inline;
-                    .menu__item {
-                        list-style: none;
-                        display: inline-block;
-                        padding: 6px 20px;
-                        &:first-child {
-                            padding-right: 0;
-                        }
-                        &::after {
-                            content: '';
-                            width: 0;
-                            height: 2px;
-                            background: $yellow-light;
-                            display: block;
-                            margin: auto;
-                            transition: .5s;
-                        }
-                        &:hover::after {
-                            width: 100%;
-                        }
-                    }
-                    .menu__link {
-                        color: #fff;
-                        text-decoration: none;
-                        font-size: 16px;
-                    }
-                }
-            }
-            /*  HEADER CONTENT STYLE */
-            .header-text {
-                .header-text__title {
-                    font-size: 45px;
-                    margin: 2em 0 .5em 0;
-                }
-                .header-text__subtitle {
-                    font-size: 24px;
-                    font-weight: 300;
-                    margin-bottom: .5em;
-                }
-                .header-text__desc {
-                    font-size: 16px;
-                    line-height: 1.5rem;
-                    margin-bottom: 55px;
-                    max-width: 500px;
-                    &::before {
-                        content: '';
-                        height: 70px;
-                        width: 5px;
-                        background: yellow;
-                        float: right;
-                        margin-left: 15px;
-                        border-radius: 2px;
-                    }
-                }
-            }
-            /* SEARCH FORM STYLE */
-            .search-form {
-                .search-form__input {
-                    width: 350px;
-                    background: #fff;
-                    color: #a3a3a3;
-                    font: inherit;
-                    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
-                    border: 0;
-                    outline: 0;
-                    padding: 15px 18px;
-                    border-radius: 5px;
-                }
-                .search-form__button {
-                    width: 110px;
-                    background: $yellow-light;
-                    color: #414141;
-                    font: inherit;
-                    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
-                    border: 0;
-                    outline: 0;
-                    padding: 15px 18px;
-                    border-radius: 5px;
-                    margin-right: 5px;
-                }
-            }
-        }
-        /* WORK SECTION */
-        
-        .work-card {
-            display: flex;
-            flex-direction: column;
-            padding: 15px 0;
-            justify-content: center;
-            margin: 10px 0;
-        }
-        
-        .work-card__title {
-            margin-bottom: 10px;
-        }
-        
-        .work-card__desc {
-            font-size: $desc-font;
-        }
-        
-        .work-card__number {
-            background: $yellow-dark;
-            border-radius: 100%;
-            color: #ffffff;
-            display: inline-block;
-            line-height: 1.6em;
-            margin-left: 10px;
-            text-align: center;
-            width: 30px;
-            height: 30px;
-            font-size: 20px;
-        }
-        /* COSTUMER SERVICE */
-        
-        .costumer-service {
+@import 'base';
+.header-wrapper {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('/images/beekeepers.jpg');
+    background-size: cover;
+    overflow: hidden;
+    padding: 40px 40px 0;
+    color: #fff;
+}
+
+
+/* MENU STYLE */
+
+nav {
+    display: none;
+}
+
+.menu {
+    flex: 1;
+    display: inline;
+}
+
+.menu__item {
+    list-style: none;
+    display: inline-block;
+    padding: 6px 20px;
+    &:first-child {
+        padding-right: 0;
+    }
+    &::after {
+        content: '';
+        width: 0;
+        height: 2px;
+        background: $yellow-light;
+        display: block;
+        margin: auto;
+        transition: .5s;
+    }
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+.menu__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+/*  HEADER CONTENT STYLE */
+
+.header-text {
+    margin-top: 140px;
+    margin-bottom: 70px;
+}
+
+.header-text__title {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.header-text__subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.header-text__desc {
+    font-size: 16px;
+    line-height: 1.5rem;
+    margin-bottom: 55px;
+    max-width: 500px;
+    border-right: 5px solid $yellow-light;
+    padding-right: 20px;
+}
+
+
+/* SEARCH FORM STYLE */
+
+.search-form__input {
+    width: 100%;
+    background: #fff;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+    border: 0;
+    outline: 0;
+    padding: 15px 18px;
+    border-radius: 5px;
+}
+
+.search-form__button {
+    width: 100%;
+    background: $yellow-light;
+    color: #414141;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+    border: 0;
+    outline: 0;
+    padding: 15px 18px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+
+/* WORK SECTION */
+
+.work-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    margin: 10px 0;
+    &:hover {
+        box-shadow: 0 6px 10px 0 rgba(97, 97, 97, 0.5);
+        border: 0;
+    }
+}
+
+.work-card__title {
+    margin-bottom: 10px;
+}
+
+.work-card__desc {
+    font-size: $desc-font;
+}
+
+.work-card__number {
+    background: $yellow-dark;
+    border-radius: 100%;
+    color: #ffffff;
+    display: inline-block;
+    line-height: 1.6em;
+    margin-left: 10px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    &:hover {
+        color: $desc-font;
+    }
+}
+
+
+/* COSTUMER SERVICE */
+
+.costumer-service {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    box-shadow: -1px -1px 5px 0px rgba(153, 153, 153, 1);
+    border-radius: 10px;
+    padding: 20px 0;
+}
+
+.costumer-service__item {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.costumer-service__image {
+    width: 60px;
+    height: 60px;
+}
+
+.costumer-service__title {
+    color: $primery-dark;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.costumer-service__desc {
+    color: $desc-font;
+    font-size: 14px;
+    font-weight: 200;
+    margin-top: 5px;
+    display: inline-block;
+    max-width: 200px;
+}
+
+
+/* ABOUT US */
+
+.about-wrapper {
+    color: $white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('/images/beekeepers.jpg');
+    background-size: cover;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 1.5em;
+    margin-top: 5rem;
+}
+
+.about-us {
+    padding: 4rem 0;
+}
+
+.about-us__item {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 0;
+    border-right: 0
+}
+
+.about-us__image {
+    width: 60px;
+    height: 60px;
+}
+
+.about-us__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.about-us__subtilte {
+    font-size: 18px;
+}
+
+
+/* OUR SERVICE */
+
+.our-service__item {
+    // background-color: #eaeafe;
+    margin: 10px 0px;
+    list-style: none;
+    display: inline-block;
+}
+
+.our-service__card {
+    background-color: #eaeafe;
+    // margin: 10px 0px;
+    padding: 15px;
+}
+
+.our-service__image {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.our-service__title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.our-service__desc {
+    font-size: 14px;
+    line-height: 1.2rem;
+    color: $desc-font;
+}
+
+
+/* BEEKEEPER */
+
+.our-beekeeper {
+    margin: 40px 0;
+}
+
+.beekeeper-card {
+    background-color: #fff;
+    // max-width: 300px;
+    cursor: pointer;
+    text-align: left;
+    box-shadow: -1px -1px 5px 0px rgb(182, 182, 182);
+    padding: 12px !important;
+    border-radius: 10px !important;
+}
+
+.beekeeper-card__image-box {
+    position: relative;
+    /*   transition: transform 0.3s ease-in-out; */
+    margin-top: -32px;
+}
+
+.beekeeper-card__image {
+    vertical-align: middle;
+    max-width: 100%;
+    border-radius: 10px !important;
+}
+
+.beekeeper-card__name {
+    font-size: 20px;
+    margin: 15px 0;
+    text-align: right;
+}
+
+.beekeeper-cardــicon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: $yellow-dark;
+    border-radius: 100%;
+    bottom: 0;
+    transform: translateY(50%);
+    left: 20px;
+}
+
+.beekeeper-card__desc {
+    font-size: 15px;
+    color: $desc-font;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.beekeeper-card__readmore {
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+    color: #1094F3;
+    font-weight: bold;
+}
+
+
+/* BLOG */
+
+.blog {
+    margin: 20px 0;
+}
+
+.post-card {
+    background-color: #fff;
+    cursor: pointer;
+    text-align: left;
+    box-shadow: -1px -1px 5px 0px rgb(182, 182, 182);
+    border-radius: 10px !important;
+}
+
+.post-card__image-box {
+    position: relative;
+}
+
+.post-card__image {
+    vertical-align: middle;
+    max-width: 100%;
+    border-radius: 10px 10px 0 !important;
+}
+
+.post-card__category {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    background-color: $yellow-dark;
+    bottom: 0;
+    left: 0;
+    color: $white;
+    font-size: 14px;
+    text-align: center;
+}
+
+.post-content {
+    padding: 15px;
+}
+
+.post-content__date {
+    font-size: 12px;
+    text-align: right;
+}
+
+.post-content__desc {
+    font-size: 14px;
+    color: $desc-font;
+    text-align: right;
+    margin: 5px 0;
+}
+
+.post-content__readmore {
+    text-decoration: none;
+    display: inline-block;
+    color: #1094F3;
+    font-weight: bold;
+}
+
+
+/* CODE */
+
+.code-wrapper {
+    background-color: #1e2022;
+    text-align: center;
+    padding: 10px 20px 40px 20px;
+}
+
+.search-cform {
+    padding: 5rem;
+    .search-cform__input {
+        width: 350px;
+        background: #fff;
+        color: #a3a3a3;
+        font: inherit;
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+        border: 0;
+        outline: 0;
+        padding: 15px 18px;
+        border-radius: 5px;
+    }
+    .search-cform__button {
+        width: 110px;
+        background: $yellow-light;
+        color: #414141;
+        font: inherit;
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+        border: 0;
+        outline: 0;
+        padding: 15px 18px;
+        border-radius: 5px;
+        margin-right: 5px;
+    }
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #292929;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    nav {
+        display: flex;
+        .list {
             flex: 1;
-            display: flex;
-            justify-content: center;
-            box-shadow: -1px -1px 5px 0px rgba(153, 153, 153, 1);
-            border-radius: 10px;
-            padding: 20px 0;
-        }
-        
-        .costumer-service__item {
-            list-style: none;
-            display: inline-block;
-            text-align: center;
-            margin: 10px 0;
-        }
-        
-        .costumer-service__image {
-            width: 60px;
-            height: 60px;
-        }
-        
-        .costumer-service__title {
-            color: $primery-dark;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        
-        .costumer-service__desc {
-            color: $desc-font;
-            font-size: 14px;
-            font-weight: 200;
-            margin-top: 5px;
-            display: inline-block;
-            max-width: 200px;
-        }
-        /* ABOUT US */
-        
-        .about-wrapper {
-            color: $white;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('/images/beekeepers.jpg');
-            background-size: cover;
-            overflow: hidden;
-            text-align: center;
-            padding-top: 1.5em;
-            margin-top: 5rem;
-        }
-        
-        .about-us {
-            padding: 4rem 0;
-        }
-        
-        .about-us__item {
-            list-style: none;
-            display: inline-block;
-            text-align: center;
-            margin: 10px 0;
-            border-right: 1px solid rgba(252, 247, 222, 0.2);
-            &:first-child {
-                border-right: 0;
+            display: inline;
+            .list__item {
+                list-style: none;
+                display: inline-block;
+                padding: 6px 20px;
+                &::after {
+                    content: '';
+                    width: 0;
+                    height: 2px;
+                    background: yellow;
+                    display: block;
+                    margin: auto;
+                    transition: .5s;
+                }
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+            .list__link {
+                color: #fff;
+                text-decoration: none;
+                font-size: 16px;
             }
         }
-        
-        .about-us__image {
-            width: 60px;
-            height: 60px;
-        }
-        
-        .about-us__title {
-            font-size: 24px;
-            font-weight: bold;
-            margin: 10px;
-        }
-        
-        .about-us__subtilte {
-            font-size: 18px;
-        }
-        /* OUR SERVICE */
-        
-        .our-service__item {
-            // background-color: #eaeafe;
-            margin: 10px 0px;
-            list-style: none;
-            display: inline-block;
-        }
-        
-        .our-service__card {
-            background-color: #eaeafe;
-            margin: 10px 0px;
-            padding: 15px;
-        }
-        
-        .our-service__image {
-            height: 120px;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .our-service__title {
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        .our-service__desc {
-            font-size: 14px;
-            line-height: 1.2rem;
-            color: $desc-font;
-        }
+    }
+}
+
+.footer__detail {
+    margin: 5rem 0;
+}
+
+.footer__title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer__content {
+    color: #888888;
+    font-size: 16px;
+    text-align: center;
+}
+
+.footer__col {
+    margin-top: 15px;
+}

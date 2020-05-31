@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+    nav {
+        display: flex;
+    }
+    .search-form__input {
+        width: 350px;
+    }
+    .search-form__button {
+        width: 110px;
+    }
+    .about-us__item {
+        border-right: 1px solid rgba(252, 247, 222, 0.2);
+        &:first-child {
+            border-right: 0;
+        }
+    }
+}

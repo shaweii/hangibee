@@ -1,0 +1,20 @@
+{
+  "name": "hangibee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaweii/hangibee.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaweii/hangibee/issues"
+  },
+  "homepage": "https://github.com/shaweii/hangibee#readme"
+}
