@@ -2,7 +2,7 @@
 // COLOR 
 $yellow-dark: #FECF14;
 $yellow-light:#FFF106;
-$white:#f5f5f5;
+$white:#ffffff;
 $primery-light:#7d7e7f;
 $primery-dark:#464749;
 // FONT SIZE 
@@ -16,11 +16,22 @@ $desc-font: 16px;
     padding: 0;
 }
 
+//FONT-FACE
+@font-face {
+    font-family: 'IRANSans';
+    src: url('/fonts/IRANSans-web.eot');
+    src: url('IRANSans-web.eot?#iefix') format('eot'), /* IE6–8 */
+    url('/fonts/IRANSans-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('/fonts/IRANSans-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/fonts/IRANSans-web.ttf') format('ttf');
+    font-weight: normal;
+}
+
 //MAIN
 body {
     background: $white;
     direction: rtl;
-    font-family: 'Vazir';
+    font-family: 'IRANSans';
 }
 
 .wrapper {

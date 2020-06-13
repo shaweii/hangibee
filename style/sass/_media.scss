@@ -1,17 +1,36 @@
 @media (min-width: 768px) {
-    nav {
+    .top-navbar {
         display: flex;
     }
     .search-form__input {
-        width: 350px;
+        width: 400px;
+        font-size: 12px;
+        padding: 18px;
     }
     .search-form__button {
         width: 110px;
+        font-size: 12px;
+        padding: 18px;
     }
     .about-us__item {
         border-right: 1px solid rgba(252, 247, 222, 0.2);
         &:first-child {
             border-right: 0;
         }
+    }
+    .header-video {
+        position: relative;
+        display: flex;
+        cursor: pointer;
+    }
+    .header-video__img {
+        position: absolute;
+        left: -60px;
+        bottom: -70px;
+    }
+    .header-video__icon {
+        position: absolute;
+        left: 25px;
+        bottom: -35px;
     }
 }
