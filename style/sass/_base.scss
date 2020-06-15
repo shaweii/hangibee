@@ -35,20 +35,43 @@ body {
 }
 
 .wrapper {
-    padding-top: 2rem;
-    padding-bottom: 1.5rem;
-    &__title {
-        font-size: 26px;
-        text-align: center;
-        margin: 10px 0 0 0;
-        color: $primery-dark;
-    }
-    &__subtitle {
-        font-size: 16px;
-        text-align: center;
-        margin-bottom: 20px;
-        color: $primery-dark;
-    }
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.wrapper__title {
+    font-size: 26px;
+    text-align: center;
+    margin: 10px 0 0 0;
+    color: $primery-dark;
+}
+
+.wrapper__title-yellow {
+    font-size: 24px;
+    text-align: center;
+    margin: 10px 0 0 0;
+    color: $yellow-light;
+}
+
+.wrapper__title-white {
+    font-size: 24px;
+    text-align: center;
+    margin: 10px 0 0 0;
+    color: #fff;
+}
+
+.wrapper__subtitle {
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0 0 0;
+    color: #fff;
+}
+
+.wrapper__subtitle-code {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 0 0;
+    color: $primery-light;
 }
 
 .cont {

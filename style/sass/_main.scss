@@ -133,10 +133,13 @@
 
 .work-card__title {
     margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .work-card__desc {
     font-size: $desc-font;
+    font-size: 16px;
 }
 
 .work-card__number {
@@ -162,9 +165,11 @@
     flex: 1;
     display: flex;
     justify-content: center;
-    box-shadow: -1px -1px 5px 0px rgba(153, 153, 153, 1);
+    box-shadow: -1px -1px 5px 0px rgb(182, 182, 182);
+    // box-shadow: var(--shadow-1);
     border-radius: 10px;
-    padding: 20px 0;
+    padding: 30px 20px;
+    margin: 20px;
 }
 
 .costumer-service__item {
@@ -174,24 +179,23 @@
     margin: 10px 0;
 }
 
-.costumer-service__image {
-    width: 60px;
-    height: 60px;
+.costumer-service__img {
+    width: 75px;
+    height: 75px;
 }
 
 .costumer-service__title {
     color: $primery-dark;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
+    margin: 10px;
 }
 
 .costumer-service__desc {
     color: $desc-font;
     font-size: 14px;
-    font-weight: 200;
-    margin-top: 5px;
-    display: inline-block;
-    max-width: 200px;
+    margin: 10px 0;
+    font-weight: bold;
 }
 
 
@@ -204,7 +208,7 @@
     overflow: hidden;
     text-align: center;
     padding-top: 1.5em;
-    margin-top: 5rem;
+    margin-top: 120px;
 }
 
 .about-us {
@@ -228,6 +232,10 @@
     font-size: 24px;
     font-weight: bold;
     margin: 10px;
+    span {
+        font-size: 18px;
+        font-weight: normal;
+    }
 }
 
 .about-us__subtilte {
@@ -236,6 +244,10 @@
 
 
 /* OUR SERVICE */
+
+srvice-wrapper {
+    margin-top: 40px;
+}
 
 .our-service__item {
     // background-color: #eaeafe;
@@ -269,21 +281,11 @@
 }
 
 
-/* CONTACT US */
-
-.contact-warpper {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/images/beekeeper.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 120px 15px 20px;
-    color: #fff;
-    position: relative;
-    z-index: 1;
-}
-
-
 /* BEEKEEPER */
+
+.beekeeper-wrapper {
+    margin-top: 70px;
+}
 
 .our-beekeeper {
     margin: 40px 0;
@@ -291,8 +293,6 @@
 
 .beekeeper-card {
     background-color: #fff;
-    // max-width: 300px;
-    cursor: pointer;
     text-align: left;
     box-shadow: -1px -1px 5px 0px rgb(182, 182, 182);
     padding: 12px !important;
@@ -312,7 +312,7 @@
 }
 
 .beekeeper-card__name {
-    font-size: 20px;
+    font-size: 16px;
     margin: 15px 0;
     text-align: right;
 }
@@ -329,17 +329,143 @@
 }
 
 .beekeeper-card__desc {
-    font-size: 15px;
+    font-size: 14px;
     color: $desc-font;
     text-align: right;
     margin-bottom: 10px;
 }
 
 .beekeeper-card__readmore {
-    text-decoration: none;
-    padding: 15px;
+    text-decoration: underline;
+    padding: 12px;
     display: inline-block;
     color: #1094F3;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* CONTACT US */
+
+.contact-us {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/photo-1487611459768-bd414656ea10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 15px 20px;
+    color: #fff;
+    margin-top: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-us__title {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.contact-us__subtitle {
+    font-size: 16px;
+    padding-bottom: 80px;
+}
+
+.icon {
+    flex: 1;
+    display: inline;
+}
+
+.icon__item {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 0;
+    margin-left: 15px;
+}
+
+.icon__img {
+    width: 35px;
+    vertical-align: middle;
+}
+
+.icon__img-gray {
+    width: 25px;
+    vertical-align: middle;
+}
+
+.footer__icon {
+    position: relative;
+    margin: 30px;
+}
+
+.footer__icon::before {
+    content: " ";
+    display: block;
+    background: red;
+    width: calc(50% - 80px);
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+
+/* CONTACT-FORM */
+
+.contact-form {
+    box-shadow: -1px -1px 5px 0px rgb(182, 182, 182);
+    border-radius: 10px;
+    position: relative;
+    margin-top: 20px;
+    z-index: 10;
+    background-color: #fff;
+    color: $desc-font;
+}
+
+.contact-form__header {
+    display: flex;
+    padding: 40px 30px;
+    border-bottom: 1px solid #C6C6C6;
+}
+
+.contact-form__header-text {
+    font-size: 14px;
+}
+
+.contact-form__header-icon {
+    flex-basis: 15%;
+    margin-left: 15px;
+}
+
+.contact-form__body {
+    padding: 20px;
+    padding-bottom: 70px;
+}
+
+.contact-form__input {
+    margin-top: 30px;
+}
+
+.contact-form__input input,
+.contact-form__input textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: none 0;
+    background-color: #fafafc;
+    border-radius: 5px;
+    color: #343333;
+    font-size: 14px;
+}
+
+.contact-form__submit {
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: none 0;
+    outline: 0;
+    margin-top: 30px;
+    background-color: $yellow-light;
+    color: #fff;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -412,33 +538,6 @@
     padding: 10px 20px 40px 20px;
 }
 
-.search-cform {
-    padding: 5rem;
-    .search-cform__input {
-        width: 350px;
-        background: #fff;
-        color: #a3a3a3;
-        font: inherit;
-        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
-        border: 0;
-        outline: 0;
-        padding: 15px 18px;
-        border-radius: 5px;
-    }
-    .search-cform__button {
-        width: 110px;
-        background: $yellow-light;
-        color: #414141;
-        font: inherit;
-        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
-        border: 0;
-        outline: 0;
-        padding: 15px 18px;
-        border-radius: 5px;
-        margin-right: 5px;
-    }
-}
-
 
 /* FOOTER */
 
@@ -448,35 +547,6 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    nav {
-        display: flex;
-        .list {
-            flex: 1;
-            display: inline;
-            .list__item {
-                list-style: none;
-                display: inline-block;
-                padding: 6px 20px;
-                &::after {
-                    content: '';
-                    width: 0;
-                    height: 2px;
-                    background: yellow;
-                    display: block;
-                    margin: auto;
-                    transition: .5s;
-                }
-                &:hover::after {
-                    width: 100%;
-                }
-            }
-            .list__link {
-                color: #fff;
-                text-decoration: none;
-                font-size: 16px;
-            }
-        }
-    }
 }
 
 .footer__detail {
@@ -484,100 +554,21 @@
 }
 
 .footer__title {
-    color: #ffffff;
+    color: #fff;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     margin-bottom: 10px;
 }
 
 .footer__content {
     color: #888888;
-    font-size: 16px;
-    text-align: center;
-}
-
-.footer__col {
-    margin-top: 15px;
-}
-
-
-/* ---------------------------------------------- */
-
-
-/*-------------- feature style start ------------ */
-
-
-/* ---------------------------------------------- */
-
-.feature {
-    max-width: var(--max-site-width);
-    margin: 0 30px;
-    border-radius: 20px;
-    box-shadow: -1px -1px 5px 0px rgb(182, 182, 182);
-    // box-shadow: var(--shadow-1);
-    padding: 20px 15px;
-    margin-top: 50px;
-}
-
-.feature--item {
-    text-align: center;
-}
-
-.feature--item img {
-    width: 75px;
-}
-
-.feature--description {
-    color: #666;
     font-size: 14px;
-    margin-top: 10px
+    text-align: center;
 }
 
-.contact {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/photo-1487611459768-bd414656ea10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 120px 15px 20px;
-    color: #fff;
-    position: relative;
-    z-index: 1;
-}
 
-.contact__title {
-    font-size: 30px;
-    color: #fff;
-}
-
-.contact__subtitle {
-    font-size: 15px;
-    color: #BCBCBC;
-    margin-top: 15px;
-}
-
-.contact__icons {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-}
-
-.contact__icon {
-    margin-left: 20px;
-    margin-top: 30px;
-    color: #fff;
-}
-
-.contact__icon i {
-    font-size: 20px;
-    color: #fff;
-    transition: color 0.3s ease;
-}
-
-.contact__icon i:hover {
-    color: blue;
-}
+/* TIMELINE */
 
 .timeline {
     position: relative;
@@ -634,65 +625,38 @@
     margin-top: 15px;
 }
 
-.cform {
-    box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+.footer--social {
+    text-align: center;
+    margin: 30px;
     position: relative;
-    margin-top: 20px;
-    z-index: 10;
-    background-color: #fff;
 }
 
-.cform__header {
-    display: flex;
-    padding: 40px 30px;
-    color: #5B5B5B;
-    border-bottom: 1px solid #C6C6C6;
+.footer--social::after {
+    content: " ";
+    display: block;
+    background: red;
+    width: calc(50% - 80px);
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
 }
 
-.cform__header-icon {
-    flex-basis: 15%;
-    margin-left: 15px;
-    background-color: #FFCE1C;
-    border-radius: 10px;
+.footer--social::before {
+    content: " ";
+    display: block;
+    background: #484848;
+    width: calc(50% - 80px);
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
 }
 
-.cform__body {
-    padding: 20px;
-    padding-bottom: 70px;
-}
-
-.cform__input {
-    margin-top: 30px;
-}
-
-.cform__input input,
-.cform__input textarea {
-    width: 100%;
-    padding: 15px 20px;
-    border: none 0;
-    background-color: #F4F4F6;
-    border-radius: 5px;
-    color: #9898A4;
-    font-size: 15px;
-}
-
-.cform__submit {
-    padding: 15px;
-    width: 100%;
-    border-radius: 5px;
-    border: none 0;
-    outline: 0;
-    margin-top: 30px;
-    background-color: #FFCE1C;
-    color: #fff;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-@media (min-width: 768px) {
-    .cform {
-        top: -129px;
-        margin-top: 0px;
-    }
+.footer--social img {
+    width: 25px;
+    margin-left: 7px;
+    vertical-align: middle;
 }
